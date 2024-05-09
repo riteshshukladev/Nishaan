@@ -20,7 +20,10 @@ if (isset($_POST['login'])) { // Ensure your login form has a button named 'logi
         header("Location: ../../profile/profile.php?user=".$usernameurlencoded);
         exit;
     } else {
-        echo "Login failed: Incorrect username or password";
+        
+        header("Location: ./login.html?error=Incorrect username or password");
+    
+        exit;
     }
 }
 ?>

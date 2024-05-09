@@ -3,7 +3,7 @@
 $host = 'localhost';
 $db = 'bookmarks';
 $user = 'postgres';
-$pass = '123456';
+$pass = '89999';
 $dsn = "pgsql:host=$host;dbname=$db;";
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

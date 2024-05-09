@@ -50,3 +50,9 @@ button:hover {
     text-align: center;
     margin-top: 10px;
 }
+.error-area{
+    display: none;
+    color: red;
+    text-align: left;
+    padding:5px 0;
+}

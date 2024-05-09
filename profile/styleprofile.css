@@ -172,6 +172,7 @@ main .user-details button:hover{
     height: 24px;
     border: none;
     border-width: none;
+    margin-right: 5px;
 }
 .folder-img img{
     width: 100%;
@@ -202,8 +203,7 @@ main .user-details button:hover{
 .footer form input{
     border: solid;
     border-width: 1px;
-    min-width: 220px;
-    border-width: 1px;
+    min-width: 290px;
     border-color: #010101;
     border-radius: 4px;
     padding: 8px;
@@ -216,10 +216,8 @@ main .user-details button:hover{
     color: white;
     border: none;
     width: 120px;
-    max-height: 100%;
     height: auto;
-    padding-top: 12px;
-    padding-bottom: 12px;
+   
     font-size: 14px;
     cursor: pointer;
     border-radius: 4px;
@@ -372,10 +370,10 @@ button[type=submit]:hover {
 }
 
 /* Add some margin to form elements */
-#addFolderForm {
+/* #addFolderForm {
     margin: 0 auto;
     width: 90%;
-}
+} */
 
 
 /* Delte folder */

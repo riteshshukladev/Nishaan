@@ -18,11 +18,26 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
+            <span class="error-area"></span>
             <button type="submit" name="login">Login</button>
             <p id="error-message"></p>
             </form>
             <button type="button" onclick="location.href='../signup/signup.html'">Sign Up</button>
     </div>
-    <script src="script.js"></script>
+    
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+            const errorArea  = document.querySelector('.error-area');
+            if(error){
+                errorArea.style.display = 'block';
+                errorArea.innerHTML = error;
+                setTimeout(() => {
+                    errorArea.style.display = 'none';
+                }, 5000);
+            }
+        }
+    </script>
 </body>
 </html>

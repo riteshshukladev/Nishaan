@@ -205,3 +205,9 @@ footer button {
 footer button:hover{
     background-color: #2e4ff9;
 }
+#empty-links{
+    text-align: center;
+    color: #323338;
+    font-weight: 300;
+    margin-top: 24px;
+}

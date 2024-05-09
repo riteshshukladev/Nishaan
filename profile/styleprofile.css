@@ -228,7 +228,12 @@ main .user-details button:hover{
     background-color: #2e4ff9;
 }
 
-
+#empty-folders{
+    text-align: center;
+    color: #323338;
+    font-weight: 300;
+    margin-top: 24px;
+}
 
 /* modal */
 

@@ -63,6 +63,9 @@ if (isset($_GET['user_id']) && isset($_GET['foldername'])) {
         <div id="Display">
             <h5><?php echo htmlspecialchars($foldername) ?></h5>
             <div class="links">
+                <?php if(sizeof($links)==0){
+                    echo "<h3 id ='empty-links'>There's isn't any link, Add one?</h3>";
+                } ?>
                 <?php foreach ($links as $link) : ?>
                     <div class="folder-block">
                         <div class="folder-block-1">
@@ -76,7 +79,7 @@ if (isset($_GET['user_id']) && isset($_GET['foldername'])) {
                                     data-userid="<?php echo htmlspecialchars($userid) ?>">
                                     <img src="../images/icons/image.png" alt="delete button" class="folder-img">
                             </button>
-                                <a href="<?php echo htmlspecialchars($link['url']) ?>">
+                                <a href="<?php echo htmlspecialchars($link['url']) ?>" target="_blank">
                                     <img src="../images/icons/link.png" alt="goto link" class="folder-img">
                                 </a>
                         </a>

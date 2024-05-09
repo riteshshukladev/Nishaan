@@ -32,7 +32,6 @@ if (isset($_GET['user'])) {
 if ($userID) {
     $stmt2 = $pdo->prepare("SELECT * FROM folders WHERE username = ?");
     $stmt2->execute([$userID]);
-    // $folders = $stmt2->fetchAll();
     while ($row = $stmt2->fetch()) {
         $FoldersNames[] = $row['foldername'];
     }
@@ -86,6 +85,9 @@ $userDetails = $stmt2->fetch();
 
     <div id="Display">
         <div class="links">
+            <?php if(sizeof($FoldersNames) == 0){
+                echo "<h3 id ='empty-folders'>Empty Folders! Create One?</h3>";
+            } ?>
             <?php foreach ($FoldersNames as $foldername) : ?>
                 <div class="folder-block">
                     <div class="folder-block-1">

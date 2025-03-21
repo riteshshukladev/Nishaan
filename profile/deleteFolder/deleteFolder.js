@@ -1,68 +1,77 @@
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener("DOMContentLoaded", function () {
+  const deleteButtons = document.querySelectorAll(".folder-button");
+  const modal = document.getElementById("deleteFolderModal");
+  const closeModal = modal.querySelector(".folder-close");
+  const confirmDeleteBtn = modal.querySelector(".confirmdelete");
+  let currentFolderName;
+  let currentUID;
 
-    const deleteButtons = document.querySelectorAll('.folder-button');
-    const modal = document.getElementById('deleteFolderModal');
-    const closeModal = modal.querySelector('.folder-close');
-    const confirmDeleteBtn = modal.querySelector('.confirmdelete');
+  deleteButtons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.stopPropagation();
+      currentUID = this.getAttribute("data-userid");
+      currentFolderName = this.getAttribute("data-foldername");
+      showModal(currentUID, currentFolderName);
+    });
+  });
 
-    let currentFolderName;
-    let currentUID;
+  function showModal(userID, folderName) {
+    currentUID = userID;
+    currentFolderName = folderName;
+    document.querySelector(".deletefoldername").textContent = folderName;
+    modal.style.display = "block";
+  }
 
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 
-    deleteButtons.forEach(button =>{
-        console.log(button);
-        button.addEventListener('click',function(){
-            const userID = this.getAttribute('data-userid');
-            const folderName = this.getAttribute('data-foldername');
-            console.log(userID , folderName);
-            showModal(userID , folderName);
-        })
+  confirmDeleteBtn.addEventListener("click", function () {
+    const tabId = new URLSearchParams(window.location.search).get("tab_id");
+    console.log("tabId being sent:", tabId); // Add this line
+    console.log(currentUID);
+    console.log(currentFolderName);
+
+    fetch("delete_folder.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `userID=${currentUID}&folderName=${encodeURIComponent(
+        currentFolderName
+      )}&tab_id=${encodeURIComponent(tabId)}`,
     })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          // Display the alert box and wait for it to be acknowledged
+          alert("Folder Deleted Successfully");
+          if (data.redirectTo) {
+            window.location.href = data.redirectTo; // Use the absolute URL directly
+          } else {
+            console.error("Redirect URL is missing");
+            alert("An error occurred: Missing redirect URL");
+          }
+        } else {
+          if (data.redirectTo) {
+            // window.location.href = data.redirectTo;
+            console.log(data);
+            console.log("in the else chamber");
+          } else {
+            throw new Error(data.message || "Error deleting folder");
+          }
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("An Error occurred: " + error.message);
+        modal.style.display = "none";
+      });
+  });
 
-
-    function showModal(userID , folderName){
-        currentUID = userID;
-        currentFolderName = folderName;
-
-       
-        document.querySelector('.deletefoldername').textContent = folderName;
-
-        modal.style.display = 'block';
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
     }
-
-    closeModal.addEventListener('click' ,function(){
-        modal.style.display = 'none';
-
-    })
-
-    confirmDeleteBtn.addEventListener('click' , function(){
-        fetch('delete_folder.php' , {
-            method:'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body:`userID=${currentUID}&folderName=${encodeURIComponent(currentFolderName)}`
-        })
-        .then(response =>{
-            if(!response.ok){
-                
-                throw new Error('Network issue');
-            }
-            return response.json();
-        })
-        .then(data=>{
-            if(data.success){
-                alert('Folder Deleted Successfully');
-                location.reload();
-            }
-            else{
-                throw new Error('Error deleting folder');
-            }
-        })
-        .catch(error=>{
-            console.log(error);
-            alert('An Error occured, try again letter');
-        })
-        modal.style.display = 'none';
-    })
-})
+  });
+});

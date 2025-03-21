@@ -1,377 +1,373 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    background-color: #f5f5f5;
-    color: #010101;
-    box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  color: #010101;
+  box-sizing: border-box;
 }
 
-h1, p,h6,h4,h5 {
-    margin: 0px;
+h1,
+p,
+h6,
+h4,
+h5 {
+  margin: 0px;
 }
 
-h6{
-    font-size: 1rem;
-    font-weight: 400;
+h6 {
+  font-size: 1rem;
+  font-weight: 400;
 }
-h5{
-    font-size: 1.25rem;
-    font-weight: 500;
-
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
-h4{
-    font-size: 1.50rem;
-    font-weight: 500;
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
-
-header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        padding-top: 2rem;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
 }
-header button{
-    border: none;
-    font-size:16px ;
-    background-color: transparent;
-    
-   
+header button {
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
 }
-header button:hover{
-    cursor: pointer;
-    text-decoration: underline;
+header button:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
-main{
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2.35rem;
-    gap:0.5rem ;
-   padding-top: 1rem;
+main {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2.35rem;
+  gap: 0.5rem;
+  padding-top: 1rem;
 }
-.main-img{
-    
-    width: 64px;
-    height: 64px;
-    margin-bottom: 10px;
+.main-img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 10px;
 }
-.main-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-   
+.main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-main .user-details{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 0.5rem;
+main .user-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
-main .user-details h4{
-    line-height: 120%;
-}
-
-main .user-details button{
-    border: none;
-    background-color: #70779a;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-}
-main .user-details button:hover{
-    background-color: #5c6386;
-}
-#Display{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
-    gap: 12px;
-    margin-top: 24px;
+main .user-details h4 {
+  line-height: 120%;
 }
 
-#Display .links{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
-    gap: 12px;
-    margin-top: 24px;
+main .user-details button {
+  border: none;
+  background-color: #70779a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main .user-details button:hover {
+  background-color: #5c6386;
+}
+#Display {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
 }
 
-#Display .links .folder-block{
-    display: flex;
-    min-width: 480px;
-    flex-direction: row;
-    width: 100%;
-    gap: 8px;
-    padding: 1rem;
-    background-color: #f5f5f5;
-    justify-content: space-between;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    border: solid;
-    border-width: 1px;
-    border-color: #f5f5f5;
-    cursor: pointer;
-    /* margin-left: 2rem; */
-}
-#Display .links .folder-block .folder-icn-wp{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#Display .links .folder-block .folder-icn-wp button{
-    outline: none;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
-#Display .links .folder-block:hover{
- 
-        box-shadow: 0px 46px 13px 0px rgba(143, 143, 143, 0.00), 0px 29px 12px 0px rgba(143, 143, 143, 0.01), 0px 16px 10px 0px rgba(143, 143, 143, 0.05), 0px 7px 7px 0px rgba(143, 143, 143, 0.09), 0px 2px 4px 0px rgba(143, 143, 143, 0.10);
-        border-color: grey;
-        background-color: #D8D8D8;
-        font-weight: 500;
-    
-}
-#Display .links .folder-block .folder-block-1{
-    display: flex;
-    flex-direction: row;
-    /* gap: 8px; */
-    align-items: center;
-    justify-content: center;
+#Display .links {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
 }
 
-.folder-img{
-    width: 24px;
-    height: 24px;
-    border: none;
-    border-width: none;
-    margin-right: 5px;
+#Display .links .folder-block {
+  display: flex;
+  min-width: 480px;
+  flex-direction: row;
+  width: 100%;
+  gap: 8px;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  justify-content: space-between;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: solid;
+  border-width: 1px;
+  border-color: #f5f5f5;
+  cursor: pointer;
+  /* margin-left: 2rem; */
 }
-.folder-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+#Display .links .folder-block .folder-icn-wp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Display .links .folder-block .folder-icn-wp button {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+#Display .links .folder-block:hover {
+  box-shadow: 0px 46px 13px 0px rgba(143, 143, 143, 0),
+    0px 29px 12px 0px rgba(143, 143, 143, 0.01),
+    0px 16px 10px 0px rgba(143, 143, 143, 0.05),
+    0px 7px 7px 0px rgba(143, 143, 143, 0.09),
+    0px 2px 4px 0px rgba(143, 143, 143, 0.1);
+  border-color: grey;
+  background-color: #d8d8d8;
+  font-weight: 500;
+}
+#Display .links .folder-block .folder-block-1 {
+  display: flex;
+  flex-direction: row;
+  /* gap: 8px; */
+  align-items: center;
+  justify-content: center;
 }
 
-.footer{
-    position: fixed;
-    margin: auto;
-    bottom: 24px;
-    right: auto;
-    left: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.folder-img {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-width: none;
+  margin-right: 5px;
 }
-.footer form{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-
+.folder-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.footer form input{
-    border: solid;
-    border-width: 1px;
-    min-width: 290px;
-    border-color: #010101;
-    border-radius: 4px;
-    padding: 8px;
-    outline: none;
-    font-size: 16px;
+.footer {
+  position: fixed;
+  margin: auto;
+  bottom: 24px;
+  right: auto;
+  left: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer form input {
+  border: solid;
+  border-width: 1px;
+  min-width: 290px;
+  border-color: #010101;
+  border-radius: 4px;
+  padding: 8px;
+  outline: none;
+  font-size: 16px;
 }
 
 .footer form button {
-    background-color: #4262ff;
-    color: white;
-    border: none;
-    width: 120px;
-    height: auto;
-   
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-left: 8px;
-    transition: all 0.3s ease;
+  background-color: #4262ff;
+  color: white;
+  border: none;
+  width: 120px;
+  height: auto;
+
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 8px;
+  transition: all 0.3s ease;
 }
-.footer form button:hover{
-    background-color: #2e4ff9;
+.footer form button:hover {
+  background-color: #2e4ff9;
 }
 
-#empty-folders{
-    text-align: center;
-    color: #323338;
-    font-weight: 300;
-    margin-top: 24px;
+#empty-folders {
+  text-align: center;
+  color: #323338;
+  font-weight: 300;
+  margin-top: 24px;
 }
 
 /* modal */
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 500px; /* Maximum width */
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px; /* Maximum width */
 }
 
 /* The Close Button */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Input fields styling */
-input[type=text], input[type=email], textarea {
-    width: 100%; /* Full width */
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure padding doesn't affect the total width */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure padding doesn't affect the total width */
 }
 
 /* Style the submit button */
-button[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+button[type="submit"] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-button[type=submit]:hover {
-    background-color: #45a049;
+button[type="submit"]:hover {
+  background-color: #45a049;
 }
-
 
 /* folder */
 /* The Folder Modal (background) */
 .folder-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Folder Modal Content */
 .folder-modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 500px; /* Maximum width */
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px; /* Maximum width */
 }
 
 /* The Close Button */
 .folder-close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .folder-close:hover,
 .folder-close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Style the input field */
 #addFolderForm input[type="text"] {
-    width: calc(100% - 22px); /* Full-width minus padding and border */
-    padding: 10px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box; /* Make sure the padding doesn't affect the total width */
+  width: calc(100% - 22px); /* Full-width minus padding and border */
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Make sure the padding doesn't affect the total width */
 }
 
 /* Style the submit button */
 #addFolderForm button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
 #addFolderForm button[type="submit"]:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 /* Add some padding inside the box */
 .folder-modal-content {
-    padding: 20px;
+  padding: 20px;
 }
 
 /* Add some margin to form elements */
@@ -380,64 +376,104 @@ button[type=submit]:hover {
     width: 90%;
 } */
 
-
 /* Delte folder */
 
 /* Backdrop style */
 #deleteFolderModal {
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    display: none; /* Hidden by default. Use JavaScript to show */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  display: none; /* Hidden by default. Use JavaScript to show */
 }
 
 /* Modal content box style */
 .delete-model-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* The Close Button (x) */
 .folder-close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .folder-close:hover,
 .folder-close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Submit Button Style */
-#deleteFolderModal button[type=submit] {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+#deleteFolderModal button[type="submit"] {
+  background-color: #4caf50; /* Green */
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
-#deleteFolderModal button[type=submit]:hover {
-    background-color: #45a049;
+#deleteFolderModal button[type="submit"]:hover {
+  background-color: #45a049;
 }
 
 /* Adding some padding around the text */
 #deleteFolderModal p {
-    margin: 16px 0;
-    line-height: 1.6;
+  margin: 16px 0;
+  line-height: 1.6;
+}
+
+/* Add to your existing styleprofile.css */
+.collaborator-input {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.permission-options {
+  display: flex;
+  gap: 20px;
+}
+
+.collaborator-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.share-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#collaboratorsList {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+// Add this to your existing CSS
+.shared-badge {
+  font-size: 0.8em;
+  color: #666;
+  margin-left: 8px;
+  font-style: italic;
 }

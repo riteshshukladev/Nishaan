@@ -1,35 +1,33 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("linkInputForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const tabId = new URLSearchParams(window.location.search).get("tab_id");
+      formData.append("tab_id", tabId);
 
-    document.getElementById('linkInputForm').addEventListener('submit',function(e){
-        e.preventDefault();
-        const formData = new FormData(this);
-
-        for(let[key,value] of formData.entries()){
-            console.log(key +"--"+ value);
-        }
-
-        fetch('input.php',{
-            method:'post',
-            body:formData
+      fetch("input.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Network issue");
+          }
+          return response.json();
         })
-        .then((response)=>{
-            if(!response.ok){
-                throw new Error('Network issue');
-            }
-            else return response.json();
+        .then((data) => {
+          if (data.success) {
+            alert(data.message || "Link added successfully");
+            window.location.reload();
+          } else {
+            throw new Error(data.message || "Failed to add link");
+          }
         })
-        .then((data)=>{
-            if(data.success){
-                alert('profile updated ');
-                window.location.reload();
-            }
-            else{
-                alert('some error while inserting the link'+data.msg);
-            }
-        })
-        .catch((err)=>{
-            console.log(err);
-            alert('some error occured'+err);
-        })
-    })
-})
+        .catch((err) => {
+          console.error("Error:", err);
+          alert(err.message || "An error occurred while adding the link");
+        });
+    });
+});
